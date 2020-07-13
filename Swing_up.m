@@ -23,7 +23,7 @@ else
 end
 
 %LQR Controller
-Q = [25 0 0 0; 0 1 0 0; 0 0 10 0; 0 0 0 1]; %cost on states
+Q = [5 0 0 0; 0 1 0 0; 0 0 5 0; 0 0 0 1]; %cost on states
 R = 10; %cost on inputs
 [K,S,E] = lqr(sys,Q,R);
 % Trajectory Optimization
