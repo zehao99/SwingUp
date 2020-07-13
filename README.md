@@ -1,6 +1,6 @@
 ## Swing Up Control
 
-Code for CS project
+Code for Control and System Theory problem
 
 ![](Swingup.gif)
 
