@@ -19,7 +19,7 @@ sys = ss(A,B,C,D);
 if rank(ctrb(sys))==4
     disp('System is controllable!');
 else
-    disp('System is not controllable :(');
+    disp('System is not controllable.');
 end
 
 %LQR Controller
