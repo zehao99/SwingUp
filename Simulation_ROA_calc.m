@@ -3,10 +3,10 @@ clear;
 
 % Put into state space form
 A = [0 1 0      0; ...
-     0 0 1.7818  0;...
+     0 0 1.089  0;...
      0 0 0      1; ...
-     0 0 10.69 0];
-B = [0;0.9848;0;0.9090];
+     0 0 13.067 0];
+B = [0;0.7407;0;1.111];
 C = eye(4);
 D = 0;
 sys = ss(A,B,C,D);
@@ -31,8 +31,8 @@ dtheta_initial = 0;
 sim('Simulation.slx');
 
 %% Basin of Attraction Analysis
-numThetas = 100;
-numDThetas = 100;
+numThetas = 50;
+numDThetas = 50;
 theta_initials = linspace(0,90,numThetas+1);
 dtheta_initials = linspace(0,500,numDThetas+1);
 counter = 0;
@@ -52,6 +52,7 @@ for i=1:numThetas
         dataMatrix = [dataMatrix; theta_initial dtheta_initial success];
         disp('Iteration: ');
         disp(counter);
+    end
 end
 
 dataMatrix = load('RegionOfAttraction.mat');
